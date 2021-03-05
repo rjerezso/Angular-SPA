@@ -1,1 +1,21 @@
-<p>heroe works!</p>
+<h1 class="animated fadeIn fast">{{ heroe.nombre }} <small>{{ heroe.aparicion }}</small></h1>
+<hr>
+<div class="row animated fadeIn">
+    <div class="col-md-4">
+        <img [src]="heroe.img" class="img-fluid" alt="">
+        <br>
+        <br>
+        <a href="heroes" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{ heroe.nombre }}</h3>
+        <hr>
+        <p>
+            {{ heroe.bio }}
+        </p>
+        <div>
+            <img class="logo-casa"
+                [src]="heroe.casa === 'Marvel' ? 'assets/img/logo-marvel.png' : 'assets/img/dc-logo.png'" alt="">
+        </div>
+    </div>
+</div>
